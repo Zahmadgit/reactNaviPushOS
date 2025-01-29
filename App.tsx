@@ -3,15 +3,16 @@ import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,StyleSheet,Text,View,
 } from 'react-native';
+import FirstPage from './src/screens/FirstPage';
 
 function App(): React.JSX.Element {
 
 
   return (
     <SafeAreaView>
-      <View>
-        <Text>hello world</Text>
-      </View>
+
+        <FirstPage/>
+   
     </SafeAreaView>    
   );
 }
