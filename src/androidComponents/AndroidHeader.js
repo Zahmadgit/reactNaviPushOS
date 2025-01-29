@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightblue',
         justifyContent: 'center',
         alignItems: 'center',
+        //android specific elements
         elevation: 10
     },
 

@@ -2,15 +2,18 @@ import React from 'react';
 import { View, Text, TextInput, Button, Alert, StyleSheet } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { useNavigation } from '@react-navigation/native';
+
 
 // Validation schema using Yup
 import { validationSchema } from '../schemas/LoginSchema';
 
 const FirstPage = () => {
+
+  const navigation = useNavigation();
   const handleSubmit = (values) => {
     Alert.alert('Form Credentials:', JSON.stringify(values));
   };
-
   //for testing error boundary, throw it when needed
   //throw new Error("Testing Error Boundary");
   
@@ -46,6 +49,7 @@ const FirstPage = () => {
           {touched.password && errors.password && (
             <Text style={styles.errorText}>{errors.password}</Text>
           )}
+          <Button onPress={navigation.navigate('SecondPage')} title="Go to Second Page" />
           <Button onPress={handleSubmit} title="Submit" />
         </View>
       )}
