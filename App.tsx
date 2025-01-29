@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import FirstPage from './src/screens/FirstPage';
 import ErrorBoundary from './src/components/ErrorBoundary';
+import PlatformHeader from './src/components/PlatformHeader';
 
 
 function App(): React.JSX.Element {
@@ -12,6 +13,7 @@ function App(): React.JSX.Element {
 
   return (
     <ErrorBoundary>
+      <PlatformHeader/>
       <SafeAreaView>
           <FirstPage/>
       </SafeAreaView>    
