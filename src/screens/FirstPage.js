@@ -49,7 +49,7 @@ const FirstPage = () => {
           {touched.password && errors.password && (
             <Text style={styles.errorText}>{errors.password}</Text>
           )}
-          <Button onPress={navigation.navigate('SecondPage')} title="Go to Second Page" />
+
           <Button onPress={handleSubmit} title="Submit" />
         </View>
       )}

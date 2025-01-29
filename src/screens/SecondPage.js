@@ -15,8 +15,14 @@ const SecondPage = ()=>{
             >
             </Button>
             <Button 
-                title='Navigate to Third Page'
+                title='Navigate to Third Page with a push'
                 onPress={()=> navigation.push('ThirdPage',{message: "Coming from SecondPage using .push"})}
+            >
+            </Button>
+
+            <Button 
+                title='Navigate to first Page with a push'
+                onPress={()=> navigation.push('FirstPage',{message: "Coming from SecondPage using .push"})}
             >
             </Button>
         </View>
