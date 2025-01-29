@@ -4,16 +4,18 @@ import {
   SafeAreaView,StyleSheet,Text,View,
 } from 'react-native';
 import FirstPage from './src/screens/FirstPage';
+import ErrorBoundary from './src/components/ErrorBoundary';
+
 
 function App(): React.JSX.Element {
 
 
   return (
-    <SafeAreaView>
-
-        <FirstPage/>
-   
-    </SafeAreaView>    
+    <ErrorBoundary>
+      <SafeAreaView>
+          <FirstPage/>
+      </SafeAreaView>    
+    </ErrorBoundary>
   );
 }
 

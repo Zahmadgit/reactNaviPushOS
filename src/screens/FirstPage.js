@@ -11,6 +11,9 @@ const FirstPage = () => {
     Alert.alert('Form Credentials:', JSON.stringify(values));
   };
 
+  //for testing error boundary, throw it when needed
+  //throw new Error("Testing Error Boundary");
+  
   return (
     <Formik
       initialValues={{ email: '', password: ''}}
@@ -63,6 +66,7 @@ const styles = StyleSheet.create({
   errorText: {
     color: 'red',
     marginBottom: 10,
+    alignSelf: 'center',
   },
 });
 
